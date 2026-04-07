@@ -205,3 +205,22 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+
+# Frontend (docchat-frontend)
+docchat-frontend/node_modules/
+docchat-frontend/.next/
+docchat-frontend/.next/cache/
+docchat-frontend/out/
+docchat-frontend/build/
+docchat-frontend/dist/
+docchat-frontend/.vercel/
+docchat-frontend/.vercel_build_output/
+docchat-frontend/.parcel-cache/
+docchat-frontend/.cache/
+docchat-frontend/.env.local
+docchat-frontend/.env.*.local
+docchat-frontend/package-lock.json
+docchat-frontend/pnpm-lock.yaml
+docchat-frontend/yarn.lock
+docchat-frontend/.DS_Store
+node_modules
