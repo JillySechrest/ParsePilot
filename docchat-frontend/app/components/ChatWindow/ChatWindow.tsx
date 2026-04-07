@@ -2,6 +2,7 @@
 
 import {useState, useEffect, useRef} from 'react';
 import styles from './ChatWindow.module.css';
+import { authedFetch } from '@/lib/api';
 import { matchesGlob } from 'path';
 
 type Message = {
@@ -25,7 +26,7 @@ export default function ChatWindow({documentId}: Props) {
     // On mount, fetch chat history for the document
     useEffect(() => {
         async function loadHistory() {
-            const res = await fetch(`api/chat/${documentId}/history`);
+            const res = await authedFetch(`/chat/${documentId}/history`);
             if (res.ok) {
                 const data = await res.json();
                 setMessages(data.messages);
@@ -60,7 +61,7 @@ export default function ChatWindow({documentId}: Props) {
 
         try {
         // STEP 3: Send to backend
-        const res = await fetch(`api/chat/${documentId}`, {
+        const res = await authedFetch(`/chat/${documentId}/ask`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json' 

@@ -3,6 +3,7 @@
 import {useState, useEffect} from 'react';
 import Link from 'next/link';
 import styles from './Library.module.css';
+import { authedFetch } from '@/lib/api';
 
 type Document = {
     id: string,
@@ -16,7 +17,7 @@ export default function LibraryPage() {
 
     useEffect(() => {
         async function fetchDocs() {
-            const res = await fetch('api/documents');
+            const res = await authedFetch('/documents');
             if (res.ok) {
                 const data = await res.json();
                 setDocs(data.documents);

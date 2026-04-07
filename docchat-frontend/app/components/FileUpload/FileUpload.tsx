@@ -3,6 +3,7 @@
 import {useState, useCallback} from 'react';
 import {useRouter} from 'next/navigation';
 import styles from './FileUpload.module.css';
+import { authedFetch } from '@/lib/api';
 
 // Only supported file extensions for upload & max file size (10MB)
 const ALLOWED_TYPES = [
@@ -41,7 +42,7 @@ export default function FileUpload() {
 
             // --- SEND REQUEST TO BACKEND ---
             // Content-Type header is set via FormData
-            const response = await fetch('api/documents/upload', {
+            const response = await authedFetch('/documents/upload', {
                 method: 'POST',
                 body: formData,
             });
