@@ -1,0 +1,22 @@
+/* CSS for Chat component */
+
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.messageList {
+    flex: 1;
+    overflow-y: auto;
+    padding: 1 rem;
+}
+
+.inputArea {
+    display: flex;
+    gap: 0.5rem;
+    padding: 1 rem;
+    border-top: 1px solid #e0e0e0;
+}
