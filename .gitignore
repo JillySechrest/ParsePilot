@@ -223,3 +223,4 @@ docchat-frontend/package-lock.json
 docchat-frontend/pnpm-lock.yaml
 docchat-frontend/yarn.lock
 docchat-frontend/.DS_Store
+node_modules
