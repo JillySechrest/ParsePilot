@@ -5,7 +5,7 @@ from app.routes import documents, chat
 ## Create instance
 app = FastAPI(
     title="ParsePilot API",
-    decription="ParsePilot API for document parsing and chat interactions",
+    description="ParsePilot API for document parsing and chat interactions",
     version="1.0.0"
 )
 
